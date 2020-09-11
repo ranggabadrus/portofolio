@@ -1,0 +1,20 @@
+ a.footer:link {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+a.footer:visited {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+a.footer:hover {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a.footer:active {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}

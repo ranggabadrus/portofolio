@@ -1,0 +1,38 @@
+.lg{
+    width: 70%;
+}
+
+.c0ffee{
+    color: #358597;
+}
+
+.bg-white{
+    background-color:rgba(255,255,255,0.7);
+    padding: 20px;
+}
+
+.flex-end{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.bg-image{
+    flex:1;
+    background-image: url("../../assets/img//rangga.jpg");
+    background-size: 100%;
+    height: 1300px;
+}
+
+.f-c-c{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
