@@ -11,8 +11,7 @@ export default function Dashboard() {
   var items = [
     {
       name: "Sharing session",
-      description: `I'm dying to share or make some chat conversation to guide you into the programming world. 
-         With my set of skills, i wish it can be helpful for anyone.`,
+      description: `I'm dying to share or make some chat conversation to guide you into the programming world. I'm open to share my opinion about programming for anyone who need it. And also, i have some sharing session expriences to many people, especially to Glints Academy students. With my set of skills, i wish it can be helpful for anyone.`,
     },
     {
       name: "Mobile development/React Native",
@@ -123,9 +122,10 @@ export default function Dashboard() {
                 alignItems: "flex-end",
               }}
             >
-              <h2>Wanna hear my story?</h2>
+              <h2>Wanna hear my thought?</h2>
+              {/* <h2>My thought about...</h2> */}
               <div style={{ width: "70%" }}>
-                <Carousel autoPlay={false}>
+                <Carousel interval={5000}>
                   {items.map((item, i) => (
                     // <Item key={i} item={item} />
                     <div key={i}>
@@ -286,7 +286,7 @@ export default function Dashboard() {
               backgroundColor: "#eaeaea",
               background: "linear-gradient(to right,#eaeaea, #fefefe, #eaeaea)",
               margin: "50px 0px",
-              padding: "50px 0px",
+              padding: "50px",
             }}
           >
             <div>
@@ -319,6 +319,7 @@ export default function Dashboard() {
                 display: "flex",
                 justifyContent: "space-between",
                 marginTop: "50px",
+                width: "100%",
               }}
             >
               <div
@@ -336,21 +337,16 @@ export default function Dashboard() {
                     flex: 1,
                   }}
                 >
-                  <div
+                  <img
+                    src={Shawn}
+                    alt="shawn"
                     style={{
+                      width: "20%",
+                      height: "20%",
                       borderRadius: "5000px",
                       border: "1px solid #eaeaea",
-                      height: "100px",
-                      width: "100px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      backgroundImage: `url(${Shawn})`,
-                      backgroundSize: "100%",
-                      padding: "10px",
                     }}
-                  >
-                    <div style={{ flex: 1 }}></div>
-                  </div>
+                  />
                   <div style={{ padding: "0px 20px" }}>
                     <h3>
                       <a
@@ -387,19 +383,17 @@ export default function Dashboard() {
                     flex: 1,
                   }}
                 >
-                  <div
+                  <img
+                    src={Andi}
+                    alt="andi"
                     style={{
+                      width: "20%",
+                      height: "20%",
                       borderRadius: "5000px",
                       border: "1px solid #eaeaea",
-                      height: "100px",
-                      width: "100px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      backgroundImage: `url(${Andi})`,
-                      backgroundSize: "100%",
-                      padding: "10px",
                     }}
-                  ></div>
+                  />
+
                   <div style={{ padding: "0px 20px" }}>
                     <h3>
                       <a
