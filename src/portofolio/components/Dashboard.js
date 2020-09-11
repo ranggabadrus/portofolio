@@ -5,9 +5,32 @@ import Shawn from "../../assets/img/shawn.jpeg";
 import Andi from "../../assets/img/andi.jpg";
 import "./Dashboard.css";
 import Footer from "../../shared/components/Footer";
+import Carousel from "react-material-ui-carousel";
 
 export default function Dashboard() {
-  const [contact, setContact] = useState(false);
+  var items = [
+    {
+      name: "Sharing session",
+      description: `I'm dying to share or make some chat conversation to guide you into the programming world. 
+         With my set of skills, i wish it can be helpful for anyone.`,
+    },
+    {
+      name: "Mobile development/React Native",
+      description:
+        "Actually, this is my first set skill. I can say react native has successfully hook me into the programming world. Now, i'm confident to share my knowledge about react native to you. What do you want to know about react native? React navigation? Redux? State management? Hooks? Animation? Let's talk about those.",
+    },
+    {
+      name: "Web development/React JS",
+      description:
+        "To be honest, i'm a new comer in React JS, It was begun on 10th June 2020. Luckily, React JS has many similarity with React Native because they are on same publisher, which is Facebook. So for me it will not wasting many time to learn React JS.",
+    },
+    {
+      name: "Product Owner",
+      description:
+        "Lol, i still can't believe that i had became a Product Owner. For you information, it was very challenging for me because i am kind of person that can't be serious. I'm freaking funny, energetic, expressionis in real life. It hards to me become a Leader like Product Owner, the person who have charisma, good and clear explanation, smart delivery(public speaking), and calm. But fortunately, i did it. I successfully managed to finish my product.",
+    },
+  ];
+
   return (
     <div style={{}}>
       <div
@@ -38,7 +61,12 @@ export default function Dashboard() {
             <div>
               <h3>Hii There,</h3>
               <h1>I am Rangga Yudhistira Pratama</h1>
-              <h2>Frontend Developer</h2>
+              <h2>
+                Frontend Developer at{" "}
+                <a href="https://www.chendol.com" target="_blank">
+                  Chendol Pte. Ltd.
+                </a>
+              </h2>
               <h2>React JS and React Native</h2>
             </div>
           </div>
@@ -83,15 +111,32 @@ export default function Dashboard() {
               justifyContent: "flex-end",
               display: "flex",
               textAlign: "right",
-
               padding: "50px 20px",
               background: "linear-gradient(to left, #fefefe, #eaeaea)",
             }}
           >
-            <div>
-              <h2>Any type discussion?</h2>
-              <p>Reach me here</p>
-              <p>ranggabadrus@gmail.com</p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "flex-end",
+                flexDirection: "column",
+                alignItems: "flex-end",
+              }}
+            >
+              <h2>Wanna hear my story?</h2>
+              <div style={{ width: "70%" }}>
+                <Carousel autoPlay={false}>
+                  {items.map((item, i) => (
+                    // <Item key={i} item={item} />
+                    <div key={i}>
+                      <h3>{item.name}</h3>
+                      <p style={{ wordWrap: "break-word" }}>
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
             </div>
           </div>
           <div style={{ margin: "50px 0px", padding: "50px 0px" }}>
@@ -155,7 +200,7 @@ export default function Dashboard() {
                 }}
               >
                 <h3>Backend</h3>
-                <p>No work</p>
+                <p>Coming soon...</p>
               </div>
             </div>
           </div>
@@ -246,7 +291,7 @@ export default function Dashboard() {
           >
             <div>
               <h1>Don't worry for contact</h1>
-              <h1>I'm open to discussion</h1>
+              <h1>I'm open to discussion(not for work)</h1>
             </div>
             <div>
               <button
@@ -307,12 +352,24 @@ export default function Dashboard() {
                     <div style={{ flex: 1 }}></div>
                   </div>
                   <div style={{ padding: "0px 20px" }}>
-                    <h3>Shawn</h3>
-                    <p>CEO Chendol Pte. Ltd.</p>
+                    <h3>
+                      <a
+                        href="https://www.linkedin.com/in/shawnhus/"
+                        target="_blank"
+                      >
+                        Shawn
+                      </a>
+                    </h3>
+                    <p>
+                      Founder of{" "}
+                      <a href="https://www.chendol.com" target="_blank">
+                        Chendol Pte. Ltd.
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div style={{}}>
-                  <p>Description...</p>
+                  <p>...</p>
                 </div>
               </div>
               <div
@@ -344,12 +401,24 @@ export default function Dashboard() {
                     }}
                   ></div>
                   <div style={{ padding: "0px 20px" }}>
-                    <h3>Andi Satriawan</h3>
-                    <p>People Development at Glints.com</p>
+                    <h3>
+                      <a
+                        href="https://www.linkedin.com/in/andi-s-01a83a94/"
+                        target="_blank"
+                      >
+                        Andi Satriawan
+                      </a>
+                    </h3>
+                    <p>
+                      People Development at{" "}
+                      <a href="https://www.glints.com" target="_blank">
+                        Glints.com
+                      </a>
+                    </p>
                   </div>
                 </div>
                 <div style={{}}>
-                  <p>Description...</p>
+                  <p>...</p>
                 </div>
               </div>
             </div>

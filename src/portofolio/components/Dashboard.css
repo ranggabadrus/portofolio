@@ -36,3 +36,17 @@
     justify-items: center;
     align-items: center;
 }
+
+a:hover{
+cursor: pointer;
+}
+
+a:link{
+    color:#358597
+}
+
+a:visited{
+    color:#358597
+}
+
+

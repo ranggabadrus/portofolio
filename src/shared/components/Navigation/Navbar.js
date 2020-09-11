@@ -8,7 +8,7 @@ export default function Navbar() {
   const [path, setPath] = useState("/");
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", padding: "0px 20px" }}>
       <div
         style={{
           alignItems: "center",
